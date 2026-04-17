@@ -8,7 +8,7 @@ export function Footer() {
         style={{
           maxWidth: '1440px',
           margin: '0 auto',
-          padding: '0 16px',
+          padding: '0 clamp(24px, 6vw, 96px)',
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',

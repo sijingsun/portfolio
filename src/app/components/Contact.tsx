@@ -45,7 +45,7 @@ export function Contact() {
       style={{
         maxWidth: '1440px',
         margin: '0 auto',
-        padding: 'clamp(100px, 16vw, 240px) 16px',
+        padding: 'clamp(100px, 16vw, 240px) clamp(24px, 6vw, 96px)',
         display: 'flex',
         justifyContent: 'center',
       }}

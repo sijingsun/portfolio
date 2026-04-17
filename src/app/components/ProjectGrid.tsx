@@ -153,7 +153,7 @@ export function ProjectGrid({ onProjectClick }: ProjectGridProps) {
       style={{
         maxWidth: '1440px',
         margin: '0 auto',
-        padding: '0 16px',
+        padding: '0 clamp(24px, 6vw, 96px)',
       }}
     >
       {eraGroups.map((era, eraIndex) => {

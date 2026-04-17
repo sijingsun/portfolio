@@ -556,7 +556,7 @@ export function ProjectDetail({ project, onBack, onProjectClick }: ProjectDetail
 
       {/* ══ PROJECT 2: Build with AI ══ */}
       {project.id === 2 && (
-        <div style={{ maxWidth: '1440px', margin: '0 auto', padding: '0 16px' }}>
+        <div style={{ maxWidth: '1440px', margin: '0 auto', padding: '0 clamp(24px, 6vw, 96px)' }}>
 
           {/* The Opportunity */}
           <div style={{ marginBottom: '140px' }}>
@@ -634,7 +634,7 @@ export function ProjectDetail({ project, onBack, onProjectClick }: ProjectDetail
 
       {/* ══ PROJECT 3: C3 Generative AI ══ */}
       {project.id === 3 && (
-        <div style={{ maxWidth: '1440px', margin: '0 auto', padding: '0 16px' }}>
+        <div style={{ maxWidth: '1440px', margin: '0 auto', padding: '0 clamp(24px, 6vw, 96px)' }}>
 
           {/* The Challenge */}
           <div style={{ marginBottom: '140px' }}>
@@ -724,7 +724,7 @@ export function ProjectDetail({ project, onBack, onProjectClick }: ProjectDetail
 
       {/* ══ PROJECT 4: C3.AI Prompt Engineering ══ */}
       {project.id === 4 && (
-        <div style={{ maxWidth: '1440px', margin: '0 auto', padding: '0 16px' }}>
+        <div style={{ maxWidth: '1440px', margin: '0 auto', padding: '0 clamp(24px, 6vw, 96px)' }}>
 
           {/* The Challenge */}
           <div style={{ marginBottom: '140px' }}>
@@ -826,7 +826,7 @@ export function ProjectDetail({ project, onBack, onProjectClick }: ProjectDetail
 
       {/* ══ PROJECT 5: Kumo ══ */}
       {project.id === 5 && (
-        <div style={{ maxWidth: '1440px', margin: '0 auto', padding: '0 16px' }}>
+        <div style={{ maxWidth: '1440px', margin: '0 auto', padding: '0 clamp(24px, 6vw, 96px)' }}>
 
           {/* The Concept */}
           <div style={{ marginBottom: '140px' }}>
@@ -848,16 +848,16 @@ export function ProjectDetail({ project, onBack, onProjectClick }: ProjectDetail
             <SectionHeader>The Experience</SectionHeader>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginTop: '32px' }}>
               <div style={{ borderRadius: '12px', overflow: 'hidden', border: '1px solid var(--border)' }}>
-                <ImageWithFallback src="https://www.dropbox.com/scl/fi/udftcutwvljfvb3xi1dx2/Screen-1-Welcome-screen.png?rlkey=ku9b01rk35cfzlbkd8quajhve&st=ibmby2o5&raw=1" alt="Kumo Welcome" className="w-full h-auto" />
+                <ImageWithFallback src="https://www.dropbox.com/scl/fi/udftcutwvljfvb3xi1dx2/Screen-1-Welcome-screen.png?rlkey=ku9b01rk35cfzlbkd8quajhve&st=ibmby2o5&raw=1" alt="Kumo Welcome" className="w-full h-auto" loading="lazy" />
               </div>
               <div style={{ borderRadius: '12px', overflow: 'hidden', border: '1px solid var(--border)' }}>
-                <ImageWithFallback src="https://www.dropbox.com/scl/fi/reo7iuld6liax283p6ja3/Screen-2-Chat-screen.png?rlkey=875m2bax5swwoxwrd30xwv05g&st=s49fm3yg&raw=1" alt="Kumo Chat" className="w-full h-auto" />
+                <ImageWithFallback src="https://www.dropbox.com/scl/fi/reo7iuld6liax283p6ja3/Screen-2-Chat-screen.png?rlkey=875m2bax5swwoxwrd30xwv05g&st=s49fm3yg&raw=1" alt="Kumo Chat" className="w-full h-auto" loading="lazy" />
               </div>
               <div style={{ borderRadius: '12px', overflow: 'hidden', border: '1px solid var(--border)' }}>
-                <ImageWithFallback src="https://www.dropbox.com/scl/fi/v1alx9zcl1s355c36qzcl/Screen-3-First-island-growth.png?rlkey=ondwcuagwjx9ity1xft5e9fv3&st=2lqtt2f7&raw=1" alt="Kumo Island" className="w-full h-auto" />
+                <ImageWithFallback src="https://www.dropbox.com/scl/fi/v1alx9zcl1s355c36qzcl/Screen-3-First-island-growth.png?rlkey=ondwcuagwjx9ity1xft5e9fv3&st=2lqtt2f7&raw=1" alt="Kumo Island" className="w-full h-auto" loading="lazy" />
               </div>
               <div style={{ borderRadius: '12px', overflow: 'hidden', border: '1px solid var(--border)' }}>
-                <ImageWithFallback src="https://www.dropbox.com/scl/fi/cfs9vq3z7vaestae8mqj2/Screen-4-Island-detail-breakdown.png?rlkey=8umftkeg78ohtahe2s7ooxlpd&st=v98h4lm3&raw=1" alt="Kumo Detail" className="w-full h-auto" />
+                <ImageWithFallback src="https://www.dropbox.com/scl/fi/cfs9vq3z7vaestae8mqj2/Screen-4-Island-detail-breakdown.png?rlkey=8umftkeg78ohtahe2s7ooxlpd&st=v98h4lm3&raw=1" alt="Kumo Detail" className="w-full h-auto" loading="lazy" />
               </div>
             </div>
           </div>
@@ -894,7 +894,7 @@ export function ProjectDetail({ project, onBack, onProjectClick }: ProjectDetail
       )}
 
       {/* ── Shared: style + prev/next nav ── */}
-      <div style={{ maxWidth: '1440px', margin: '0 auto', padding: '0 16px' }}>
+      <div style={{ maxWidth: '1440px', margin: '0 auto', padding: '0 clamp(24px, 6vw, 96px)' }}>
         <style>{`
           @media (max-width: 768px) {
             .spaces-two-col { grid-template-columns: 1fr !important; gap: 32px !important; }

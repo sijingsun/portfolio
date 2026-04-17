@@ -52,7 +52,7 @@ export function Hero() {
   }, []);
 
   return (
-    <div style={{ maxWidth: '1440px', margin: '0 auto 96px', padding: '0 clamp(16px, 3vw, 40px)' }}>
+    <div style={{ maxWidth: '1440px', margin: '0 auto 96px', padding: '0 clamp(24px, 6vw, 96px)' }}>
       <div
         style={{
           position: 'relative',

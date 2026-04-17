@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.DS_Store
+*.local
+.env.development
+.env.production
+.agents/
+.claude/
+.kiro/
+.impeccable.md

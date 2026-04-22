@@ -197,7 +197,7 @@ export function ForFun() {
       style={{
         maxWidth: '1440px',
         margin: '0 auto',
-        padding: '64px clamp(24px, 6vw, 96px) 96px',
+        padding: '64px clamp(32px, 9vw, 140px) 96px',
       }}
     >
       {/* Intro */}

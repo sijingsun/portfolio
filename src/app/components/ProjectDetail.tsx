@@ -221,16 +221,16 @@ function CaseStudyCTA() {
           fontFamily: '"Plus Jakarta Sans", sans-serif',
           fontWeight: 500,
           fontSize: '14px',
-          color: 'var(--accent)',
-          border: '1px solid var(--accent)',
+          color: 'var(--text-primary)',
+          border: '1.5px solid var(--text-primary)',
           borderRadius: '8px',
           padding: '12px 24px',
           textDecoration: 'none',
-          transition: 'background-color 200ms ease',
+          transition: 'background-color 200ms ease, color 200ms ease, border-color 200ms ease',
           backgroundColor: 'transparent',
         }}
-        onMouseEnter={e => (e.currentTarget.style.backgroundColor = 'var(--accent-light)')}
-        onMouseLeave={e => (e.currentTarget.style.backgroundColor = 'transparent')}
+        onMouseEnter={e => { e.currentTarget.style.backgroundColor = 'var(--text-primary)'; e.currentTarget.style.color = 'var(--bg-primary)'; }}
+        onMouseLeave={e => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.color = 'var(--text-primary)'; }}
       >
         Get in touch for a case study
         <ArrowUpRight size={14} />
@@ -402,7 +402,7 @@ export function ProjectDetail({ project, onBack, onProjectClick }: ProjectDetail
       style={{ paddingBottom: '80px' }}
     >
       {/* ── Back button ── */}
-      <div style={{ maxWidth: '1440px', margin: '0 auto', padding: '24px 16px 0' }}>
+      <div style={{ maxWidth: '1440px', margin: '0 auto', padding: '24px 16px 0', paddingLeft: 'calc(16px + clamp(24px, 6vw, 80px))' }}>
         <button
           onClick={onBack}
           style={{
@@ -500,20 +500,8 @@ export function ProjectDetail({ project, onBack, onProjectClick }: ProjectDetail
       {/* ══ PROJECT 1: Quick Spaces ══ */}
       {project.id === 1 && (
         <>
-          {/* Key metrics strip */}
-          <div style={{ maxWidth: '1440px', margin: '0 auto', padding: '0 clamp(24px, 6vw, 96px)', marginBottom: '128px' }}>
-            <p style={{ ...sectionLabel, margin: '0 0 20px' }}>Impact: Measured at GA across 73,000+ enterprise users</p>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', border: '1px solid var(--border)', borderRadius: '12px', overflow: 'hidden' }}>
-              {statBlocks[1].map((stat, i) => (
-                <div key={i} style={{ padding: '28px 32px', textAlign: 'center', borderRight: i < statBlocks[1].length - 1 ? '1px solid var(--border)' : 'none' }}>
-                  <p style={{ fontFamily: '"Playfair Display", serif', fontWeight: 400, fontSize: 'clamp(28px, 3vw, 42px)', color: 'var(--text-primary)', lineHeight: 1.1, margin: '0 0 8px' }}>{stat.value}</p>
-                  <p style={{ fontFamily: '"Plus Jakarta Sans", sans-serif', fontWeight: 400, fontSize: '13px', color: 'var(--text-secondary)', margin: 0, lineHeight: 1.4 }}>{stat.label}</p>
-                </div>
-              ))}
-            </div>
-          </div>
           {/* Spaces content */}
-          <div style={{ maxWidth: '1440px', margin: '0 auto', padding: '0 clamp(24px, 6vw, 96px)' }}>
+          <div style={{ maxWidth: '1440px', margin: '0 auto', padding: '0 clamp(32px, 9vw, 140px)' }}>
             <div style={{ marginBottom: '160px' }}>
               <SectionHeader>The Problem</SectionHeader>
               <div className="spaces-two-col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', alignItems: 'start', marginTop: '32px' }}>
@@ -545,6 +533,13 @@ export function ProjectDetail({ project, onBack, onProjectClick }: ProjectDetail
                 </PitchStatement>
               </div>
             </div>
+            <div style={{ marginBottom: '24px' }}>
+              <SectionHeader>Impact</SectionHeader>
+              <p style={{ ...bodyText, fontSize: '17px', marginTop: '16px' }}>
+                Launched to <strong style={boldInBody}>73,000+</strong> enterprise users at GA. Ease of use scored <strong style={boldInBody}>72.46%</strong> against a product average of <strong style={boldInBody}>62.25%</strong>, with <strong style={boldInBody}>87.83%</strong> task completion.
+              </p>
+            </div>
+            <StatGrid stats={statBlocks[1]} />
             <CaseStudyCTA />
             <ReadAboutIt links={[
               { label: 'Watch this announced at re:Invent', href: 'https://www.youtube.com/watch?v=0GThOh8ylKg' },
@@ -556,7 +551,7 @@ export function ProjectDetail({ project, onBack, onProjectClick }: ProjectDetail
 
       {/* ══ PROJECT 2: Build with AI ══ */}
       {project.id === 2 && (
-        <div style={{ maxWidth: '1440px', margin: '0 auto', padding: '0 clamp(24px, 6vw, 96px)' }}>
+        <div style={{ maxWidth: '1440px', margin: '0 auto', padding: '0 clamp(32px, 9vw, 140px)' }}>
 
           {/* The Opportunity */}
           <div style={{ marginBottom: '140px' }}>
@@ -634,7 +629,7 @@ export function ProjectDetail({ project, onBack, onProjectClick }: ProjectDetail
 
       {/* ══ PROJECT 3: C3 Generative AI ══ */}
       {project.id === 3 && (
-        <div style={{ maxWidth: '1440px', margin: '0 auto', padding: '0 clamp(24px, 6vw, 96px)' }}>
+        <div style={{ maxWidth: '1440px', margin: '0 auto', padding: '0 clamp(32px, 9vw, 140px)' }}>
 
           {/* The Challenge */}
           <div style={{ marginBottom: '140px' }}>
@@ -724,7 +719,7 @@ export function ProjectDetail({ project, onBack, onProjectClick }: ProjectDetail
 
       {/* ══ PROJECT 4: C3.AI Prompt Engineering ══ */}
       {project.id === 4 && (
-        <div style={{ maxWidth: '1440px', margin: '0 auto', padding: '0 clamp(24px, 6vw, 96px)' }}>
+        <div style={{ maxWidth: '1440px', margin: '0 auto', padding: '0 clamp(32px, 9vw, 140px)' }}>
 
           {/* The Challenge */}
           <div style={{ marginBottom: '140px' }}>
@@ -826,7 +821,7 @@ export function ProjectDetail({ project, onBack, onProjectClick }: ProjectDetail
 
       {/* ══ PROJECT 5: Kumo ══ */}
       {project.id === 5 && (
-        <div style={{ maxWidth: '1440px', margin: '0 auto', padding: '0 clamp(24px, 6vw, 96px)' }}>
+        <div style={{ maxWidth: '1440px', margin: '0 auto', padding: '0 clamp(32px, 9vw, 140px)' }}>
 
           {/* The Concept */}
           <div style={{ marginBottom: '140px' }}>
@@ -873,17 +868,6 @@ export function ProjectDetail({ project, onBack, onProjectClick }: ProjectDetail
             </div>
           </div>
 
-          {/* Vibe coded demo */}
-          <div style={{ marginBottom: '96px' }}>
-            <SectionHeader>Vibe Coded Interactive Demo</SectionHeader>
-            <p style={{ ...bodyText, fontSize: '17px', marginTop: '16px', marginBottom: '32px', maxWidth: '640px' }}>
-              Rather than stopping at static screens, I vibe coded Kumo into a working prototype — using motion, pacing, and interaction to reflect how a real AI reflection companion would feel in use.
-            </p>
-            <div style={{ width: '60%', margin: '0 auto', borderRadius: '12px', overflow: 'hidden', border: '1px solid var(--border)' }}>
-              <VideoPlayer src="https://www.dropbox.com/scl/fi/zs9d2b2ok7xq87tv3zj3u/vibe_code.webm?rlkey=nyu41q8glg0wg3bots2zidvr2&st=w3c1o82i&raw=1" className="w-full h-auto" autoPlay loop muted playsInline />
-            </div>
-          </div>
-
           <CaseStudyCTA />
           <ReadAboutIt links={[
             { label: 'New York Design Awards', href: 'https://nydesignawards.com/winner-info.php?id=3665' },
@@ -894,7 +878,7 @@ export function ProjectDetail({ project, onBack, onProjectClick }: ProjectDetail
       )}
 
       {/* ── Shared: style + prev/next nav ── */}
-      <div style={{ maxWidth: '1440px', margin: '0 auto', padding: '0 clamp(24px, 6vw, 96px)' }}>
+      <div style={{ maxWidth: '1440px', margin: '0 auto', padding: '0 clamp(32px, 9vw, 140px)' }}>
         <style>{`
           @media (max-width: 768px) {
             .spaces-two-col { grid-template-columns: 1fr !important; gap: 32px !important; }

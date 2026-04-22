@@ -67,7 +67,7 @@ export function Navbar({ onHomeClick, onSideWorkClick, onAboutClick, activeView 
           style={{
             maxWidth: '1440px',
             margin: '0 auto',
-            padding: '28px clamp(24px, 6vw, 96px) 18px',
+            padding: '28px clamp(32px, 9vw, 140px) 18px',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',

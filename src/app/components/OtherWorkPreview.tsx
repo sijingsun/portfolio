@@ -133,7 +133,7 @@ export function OtherWorkPreview({ onSideWorkClick }: OtherWorkPreviewProps) {
   const [paused, setPaused] = useState(false);
 
   return (
-    <section style={{ maxWidth: '1440px', margin: '0 auto 120px', padding: '0 16px' }}>
+    <section style={{ maxWidth: '1440px', margin: '0 auto 120px', padding: '0 clamp(32px, 9vw, 140px)' }}>
 
       {/* Section header */}
       <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginBottom: '12px' }}>
@@ -164,7 +164,7 @@ export function OtherWorkPreview({ onSideWorkClick }: OtherWorkPreviewProps) {
       <div style={{ height: '1px', backgroundColor: 'var(--border)', marginBottom: '40px' }} />
 
       {/* Marquee */}
-      <div style={{ overflow: 'hidden', margin: '0 -48px', padding: '0 48px' }}>
+      <div style={{ overflow: 'hidden', margin: '0 calc(-1 * clamp(32px, 9vw, 140px))', padding: '0 clamp(32px, 9vw, 140px)' }}>
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}

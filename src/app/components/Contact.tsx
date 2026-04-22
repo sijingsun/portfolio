@@ -45,7 +45,7 @@ export function Contact() {
       style={{
         maxWidth: '1440px',
         margin: '0 auto',
-        padding: 'clamp(100px, 16vw, 240px) clamp(24px, 6vw, 96px)',
+        padding: 'clamp(100px, 16vw, 240px) clamp(32px, 9vw, 140px)',
         display: 'flex',
         justifyContent: 'center',
       }}
@@ -81,16 +81,17 @@ export function Contact() {
               initial={{ opacity: 0, scale: 0.94, y: 4 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ type: 'spring', stiffness: 360, damping: 30, mass: 0.7 }}
-              style={{ ...BUBBLE_STYLE, padding: '32px 28px' }}
+              style={{ ...BUBBLE_STYLE, padding: '18px 24px' }}
             >
               <BubbleBackground />
-              <div style={{
+              <div className="contact-bubble-text" style={{
                 position: 'relative',
                 fontFamily: '"Plus Jakarta Sans", sans-serif',
                 fontWeight: 400,
-                fontSize: 'clamp(14px, 2vw, 18px)',
+                fontSize: 'clamp(12px, 1.1vw, 14px)',
                 color: '#000000',
                 lineHeight: 1.55,
+                whiteSpace: 'nowrap',
               }}>
                 <p style={{ margin: 0 }}>
                   {'Well, you made it this far — shoot me an email at '}
@@ -116,6 +117,11 @@ export function Contact() {
           )}
         </AnimatePresence>
       </div>
+      <style>{`
+        @media (max-width: 700px) {
+          .contact-bubble-text { white-space: normal !important; }
+        }
+      `}</style>
     </section>
   );
 }

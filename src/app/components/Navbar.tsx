@@ -115,7 +115,7 @@ export function Navbar({ onHomeClick, onSideWorkClick, onAboutClick, activeView 
           </button>
 
           {/* Desktop nav */}
-          <nav style={{ display: 'flex', alignItems: 'center', gap: '8px' }} className="hidden md:flex">
+          <nav className="navbar-desktop-nav" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
             {navLinks.map((link) => {
               const isActive = activeView === link.view;
               return (
@@ -147,7 +147,7 @@ export function Navbar({ onHomeClick, onSideWorkClick, onAboutClick, activeView 
           {/* Mobile hamburger */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden"
+            className="navbar-hamburger"
             style={{
               background: 'none',
               border: 'none',
@@ -163,6 +163,15 @@ export function Navbar({ onHomeClick, onSideWorkClick, onAboutClick, activeView 
           </button>
         </div>
       </header>
+
+      <style>{`
+        .navbar-desktop-nav { display: flex; }
+        .navbar-hamburger   { display: none; }
+        @media (max-width: 767px) {
+          .navbar-desktop-nav { display: none !important; }
+          .navbar-hamburger   { display: flex !important; }
+        }
+      `}</style>
 
       {/* Mobile overlay menu */}
       <AnimatePresence>

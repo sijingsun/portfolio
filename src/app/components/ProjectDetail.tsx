@@ -373,6 +373,10 @@ function SpacesVision() {
 
 export function ProjectDetail({ project, onBack, onProjectClick }: ProjectDetailProps) {
   React.useEffect(() => { window.scrollTo(0, 0); }, []);
+  React.useEffect(() => {
+    document.title = `Clair Sun / ${project.title}`;
+    return () => { document.title = 'Clair Sun'; };
+  }, [project.title]);
 
   const currentIndex = projects.findIndex(p => p.id === project.id);
   const prevProject = currentIndex > 0 ? projects[currentIndex - 1] : null;

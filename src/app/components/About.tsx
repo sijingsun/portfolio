@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
+import heroBg from '@/imports/video option 2.mp4';
 
 const awards = [
   'NY Product Design Awards — Gold',
@@ -219,7 +220,7 @@ export function About() {
               }}
             >
               <source
-                src="https://cdn.midjourney.com/video/ec71a1ff-22b1-4255-bb57-bd7e7d0248c5/0.mp4"
+                src={heroBg}
                 type="video/mp4"
               />
             </video>
